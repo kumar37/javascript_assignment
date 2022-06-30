@@ -18,12 +18,7 @@ console.log(typeof(varobj));
 let name=username();
 console.log(name);
 
-/**
-* function is the key word
-* function name is the UserName
-* function with parameter/arguments
-* function stop executes since it encounters return statement
-*/
+
 add('t','t');
 subract('t',2);
 multiply(2,2);
