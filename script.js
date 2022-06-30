@@ -24,6 +24,15 @@ console.log(name);
 * function with parameter/arguments
 * function stop executes since it encounters return statement
 */
+add('t','t');
+subract('t',2);
+multiply(2,2);
+Divide(500,3);
+add(5,6);
+subract(5.5,5);
+multiply(6,1);
+Divide(3,2);
+Divide(0,1);
 function username() {
   let name = 'Senthilkumar P'
   return name;
@@ -42,3 +51,56 @@ function username() {
   return name;
  }
  anonymousname();
+
+ function add(num1,num2) {
+   if(isNaN(num1))
+   {
+     num1=0;
+   }
+   if(isNaN(num2))
+   {
+     num2=0;
+   }
+  let result = num1+num2;
+  console.log(result);
+  return result;
+ }
+ function subract(num1,num2) {
+  if(isNaN(num1))
+  {
+    num1=0;
+  }
+  if(isNaN(num2))
+  {
+    num2=0;
+  }
+ let result = num1-num2;
+ console.log(result);
+ return result;
+}
+function multiply(num1,num2) {
+  if(isNaN(num1))
+  {
+    num1=0;
+  }
+  if(isNaN(num2))
+  {
+    num2=0;
+  }
+ let result = num1*num2;
+ console.log(result);
+ return result;
+}
+function Divide(num1,num2) {
+  if(isNaN(num1))
+  {
+    num1=0;
+  }
+  if(isNaN(num2))
+  {
+    num2=0;
+  }
+ let result = num1/num2;
+ console.log(result);
+ return result;
+}
