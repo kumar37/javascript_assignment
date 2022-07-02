@@ -1,3 +1,4 @@
+/*Assignment 7 */
 console.log('Hello!');
 let varstring = 'ram';
 console.log(typeof(varstring));
@@ -28,6 +29,8 @@ subract(5.5,5);
 multiply(6,1);
 Divide(3,2);
 Divide(0,1);
+
+/*Assignment 8 */
 function username() {
   let name = 'Senthilkumar P'
   return name;
@@ -99,3 +102,31 @@ function Divide(num1,num2) {
  console.log(result);
  return result;
 }
+
+/*Assignment 9 */
+function MyProfile() {
+  let namedetails = 'Senthilkumar';
+  let Eductiondetails = 'BE';
+  let jobdetails = 'Technical Lead';
+  let contactdetails = 'senthilpece19@gmail.com';
+  
+  function fnnamedetails() {
+    console.log(namedetails);
+  }
+  function fnEductiondetails() {
+    console.log(Eductiondetails);
+  }
+  function fnjobdetails() {
+    console.log(jobdetails);
+  }
+  function fncontactdetails() {
+    console.log(contactdetails);
+  }
+  return {fnnamedetails,fnEductiondetails,fnjobdetails,fncontactdetails};
+  }
+  
+  let profile=new MyProfile();
+  profile.fnnamedetails();
+  profile.fnEductiondetails();
+  profile.fnjobdetails();
+  profile.fncontactdetails();
