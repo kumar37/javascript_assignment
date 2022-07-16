@@ -1,4 +1,4 @@
-/*Assignment 7 */
+/*Assignment 7--Start */
 console.log('Hello!');
 let varstring = 'ram';
 console.log(typeof(varstring));
@@ -29,8 +29,8 @@ subract(5.5,5);
 multiply(6,1);
 Divide(3,2);
 Divide(0,1);
-
-/*Assignment 8 */
+/*Assignment 7--End */
+/*Assignment 8--Start */
 function username() {
   let name = 'Senthilkumar P'
   return name;
@@ -102,8 +102,8 @@ function Divide(num1,num2) {
  console.log(result);
  return result;
 }
-
-/*Assignment 9 */
+/*Assignment 8--End */
+/*Assignment 9--Start */
 function MyProfile() {
   let namedetails = 'Senthilkumar';
   let Eductiondetails = 'BE';
@@ -130,3 +130,34 @@ function MyProfile() {
   profile.fnEductiondetails();
   profile.fnjobdetails();
   profile.fncontactdetails();
+/*Assignment 9--End */
+/*Assignment 10--Start */
+let str1 = "Jack and Jill Went Up the Hill";
+let str2="";
+let i=0;
+let lowercasestr=str1.toLowerCase();
+console.log(lowercasestr);
+for (i=0;i<=lowercasestr.length;i++) {
+  if(i===0 || i===9 || i===14 || i===19 || i===26)
+  {
+    str2+=lowercasestr.charAt(i).toUpperCase();
+  }
+  else{
+    str2+=lowercasestr.charAt(i)
+  }
+}
+console.log(str2);
+let str3="Ramakumar";
+console.log(str3.indexOf('m'));
+console.log(str3.indexOf('H'));
+console.log(isemailvalid('senthil@gmail.com'));
+console.log(isemailvalid('m'));
+function isemailvalid(email)
+{
+ if(email.includes('@'))
+ {
+   return 'valid email';
+ }
+ return 'email is not valid';
+}
+/*Assignment 10--End */
