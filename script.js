@@ -1,106 +1,96 @@
 /*Assignment 7--Start */
 console.log('Hello!');
 let varstring = 'ram';
-console.log(typeof(varstring));
+console.log(typeof varstring);
 const varnumber = 3;
-console.log(typeof(varnumber));
+console.log(typeof varnumber);
 const varbigint = 900719925124740998n;
-console.log(typeof(varbigint));
+console.log(typeof varbigint);
 const varbool = true;
-console.log(typeof(varbool));
+console.log(typeof varbool);
 let varundefined;
-console.log(typeof(varundefined));
+console.log(typeof varundefined);
 const varnull = null;
-console.log(typeof(varnull));
+console.log(typeof varnull);
 const varsymbol = Symbol('hello');
-console.log(typeof(varsymbol));
-let varobj = { };
-console.log(typeof(varobj));
-let name=username();
+console.log(typeof varsymbol);
+let varobj = {};
+console.log(typeof varobj);
+let name = username();
 console.log(name);
 
-
-add('t','t');
-subract('t',2);
-multiply(2,2);
-Divide(500,3);
-add(5,6);
-subract(5.5,5);
-multiply(6,1);
-Divide(3,2);
-Divide(0,1);
+add('t', 't');
+subract('t', 2);
+multiply(2, 2);
+Divide(500, 3);
+add(5, 6);
+subract(5.5, 5);
+multiply(6, 1);
+Divide(3, 2);
+Divide(0, 1);
 /*Assignment 7--End */
 /*Assignment 8--Start */
 function username() {
-  let name = 'Senthilkumar P'
+  let name = 'Senthilkumar P';
   return name;
- }
+}
 
- (function () {
-  let name = 'Senthilkumar P IIFE'
+(function () {
+  let name = 'Senthilkumar P IIFE';
   console.log(name);
   return name;
- })();
+})();
 
- let anonymousname=function()
- {
-  let name = 'Senthilkumar P anonymous'
+let anonymousname = function () {
+  let name = 'Senthilkumar P anonymous';
   console.log(name);
   return name;
- }
- anonymousname();
+};
+anonymousname();
 
- function add(num1,num2) {
-   if(isNaN(num1))
-   {
-     num1=0;
-   }
-   if(isNaN(num2))
-   {
-     num2=0;
-   }
-  let result = num1+num2;
+function add(num1, num2) {
+  if (isNaN(num1)) {
+    num1 = 0;
+  }
+  if (isNaN(num2)) {
+    num2 = 0;
+  }
+  let result = num1 + num2;
   console.log(result);
   return result;
- }
- function subract(num1,num2) {
-  if(isNaN(num1))
-  {
-    num1=0;
-  }
-  if(isNaN(num2))
-  {
-    num2=0;
-  }
- let result = num1-num2;
- console.log(result);
- return result;
 }
-function multiply(num1,num2) {
-  if(isNaN(num1))
-  {
-    num1=0;
+function subract(num1, num2) {
+  if (isNaN(num1)) {
+    num1 = 0;
   }
-  if(isNaN(num2))
-  {
-    num2=0;
+  if (isNaN(num2)) {
+    num2 = 0;
   }
- let result = num1*num2;
- console.log(result);
- return result;
+  let result = num1 - num2;
+  console.log(result);
+  return result;
 }
-function Divide(num1,num2) {
-  if(isNaN(num1))
-  {
-    num1=0;
+function multiply(num1, num2) {
+  if (isNaN(num1)) {
+    num1 = 0;
   }
-  if(isNaN(num2))
-  {
-    num2=0;
+  if (isNaN(num2)) {
+    num2 = 0;
   }
- let result = num1/num2;
- console.log(result);
- return result;
+  let result = num1 * num2;
+  console.log(result);
+  return result;
+}
+function Divide(num1, num2) {
+  if (isNaN(num1)) {
+    num1 = 0;
+  }
+  if (isNaN(num2)) {
+    num2 = 0;
+  }
+  let result = num1 / num2;
+  console.log(result);
+  return result;
 }
 /*Assignment 8--End */
 /*Assignment 9--Start */
@@ -109,7 +99,7 @@ function MyProfile() {
   let Eductiondetails = 'BE';
   let jobdetails = 'Technical Lead';
   let contactdetails = 'senthilpece19@gmail.com';
-  
+
   function fnnamedetails() {
     console.log(namedetails);
   }
@@ -122,42 +112,116 @@ function MyProfile() {
   function fncontactdetails() {
     console.log(contactdetails);
   }
-  return {fnnamedetails,fnEductiondetails,fnjobdetails,fncontactdetails};
-  }
-  
-  let profile=new MyProfile();
-  profile.fnnamedetails();
-  profile.fnEductiondetails();
-  profile.fnjobdetails();
-  profile.fncontactdetails();
+  return { fnnamedetails, fnEductiondetails, fnjobdetails, fncontactdetails };
+}
+
+let profile = new MyProfile();
+profile.fnnamedetails();
+profile.fnEductiondetails();
+profile.fnjobdetails();
+profile.fncontactdetails();
 /*Assignment 9--End */
 /*Assignment 10--Start */
-let str1 = "Jack and Jill Went Up the Hill";
-let str2="";
-let i=0;
-let lowercasestr=str1.toLowerCase();
+let str1 = 'Jack and Jill Went Up the Hill';
+let str2 = '';
+let i = 0;
+let lowercasestr = str1.toLowerCase();
 console.log(lowercasestr);
-for (i=0;i<=lowercasestr.length;i++) {
-  if(i===0 || i===9 || i===14 || i===19 || i===26)
-  {
-    str2+=lowercasestr.charAt(i).toUpperCase();
-  }
-  else{
-    str2+=lowercasestr.charAt(i)
+for (i = 0; i <= lowercasestr.length; i++) {
+  if (i === 0 || i === 9 || i === 14 || i === 19 || i === 26) {
+    str2 += lowercasestr.charAt(i).toUpperCase();
+  } else {
+    str2 += lowercasestr.charAt(i);
   }
 }
 console.log(str2);
-let str3="Ramakumar";
+let str3 = 'Ramakumar';
 console.log(str3.indexOf('m'));
 console.log(str3.indexOf('H'));
 console.log(isemailvalid('senthil@gmail.com'));
 console.log(isemailvalid('m'));
-function isemailvalid(email)
-{
- if(email.includes('@'))
- {
-   return 'valid email';
- }
- return 'email is not valid';
+function isemailvalid(email) {
+  if (email.includes('@')) {
+    return 'valid email';
+  }
+  return 'email is not valid';
 }
 /*Assignment 10--End */
+/*Assignment 11--Start */
+console.log(randomnumber(56));
+function randomnumber(numrange) {
+  return Math.round(Math.random() * numrange).toString();
+}
+/*Assignment 11--End */
+/*Assignment 12--Start */
+let arrtitlecase = ['srini', 'ram', 'ragu', 'naveen', 'hema', 'kathick'];
+arrtitlecase.forEach(arraytitlecase);
+function arraytitlecase(item, index, arr) {
+  let withoutfirstchar = item.slice(1);
+  arr[index] = item.charAt(0).toUpperCase() + withoutfirstchar;
+}
+console.log(arrtitlecase);
+let containschari = arrtitlecase.filter(checker1);
+function checker1(item) {
+  return item.includes('i');
+}
+console.log(containschari);
+let notcontainschari = arrtitlecase.filter(checker2);
+function checker2(item) {
+  return !item.includes('i');
+}
+console.log(notcontainschari);
+/*Assignment 12--End */
+/*Assignment 13--Start */
+let arrstringsort = ['h', 'd', 'a', 'a', 'o'];
+let arrsplice = ['h', 'd', 'a', 'a', 'o'];
+let result = [];
+console.log(sortstringdesc(arrstringsort));
+console.log(sortstringasc(arrstringsort));
+ insertelemetatlast(arrsplice,'j')
+ console.log((arrsplice))
+ insertelemetatmiddle(arrsplice,'v')
+ console.log((arrsplice))
+insertelemetatfirst(arrsplice,'m')
+ console.log((arrsplice))
+console.log(deleteatlast(arrsplice))
+console.log((arrsplice))
+//  console.log(deleteatfirst(arrsplice))
+//  console.log(deleteatmiddle(arrsplice))
+// console.log(insertelemetatmiddle(arrsplice,6))
+
+function sortstringasc(array) {
+  return array.sort((a, b) => a.localeCompare(b));
+}
+function sortstringdesc(array) {
+  return array.sort((a, b) => b.localeCompare(a));
+}
+function insertelemetatlast(array, element) {
+  return array.splice(array.length,0,element);
+}
+function insertelemetatmiddle(array, element) {
+  let middlecount=Math.round(array.length/2);
+  return array.splice(middlecount,0,element);
+}
+function insertelemetatfirst(array, element) {
+  debugger
+
+  return array.splice(0,0,element);
+}
+function deleteatlast(array, element) {
+  debugger
+  let result = array.slice(array.length,0);
+  return result
+// }
+function deleteatmiddle(array, element) {
+  debugger
+
+  let middlecount=Math.round(array.length/2);
+  return array.slice(middlecount,0);
+}
+function deleteatfirst(array, element) {
+  debugger
+
+  return array.slice(0,0);
+}
+/*Assignment 13--End */
