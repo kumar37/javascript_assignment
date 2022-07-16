@@ -174,7 +174,7 @@ console.log(notcontainschari);
 /*Assignment 12--End */
 /*Assignment 13--Start */
 let arrstringsort = ['h', 'd', 'a', 'a', 'o'];
-let arrsplice = ['h', 'd', 'a', 'a', 'o'];
+let arrsplice = ['a', 'b', 'c', 'd', 'e'];
 let result = [];
 console.log(sortstringdesc(arrstringsort));
 console.log(sortstringasc(arrstringsort));
@@ -184,11 +184,9 @@ console.log(sortstringasc(arrstringsort));
  console.log((arrsplice))
 insertelemetatfirst(arrsplice,'m')
  console.log((arrsplice))
-console.log(deleteatlast(arrsplice))
-console.log((arrsplice))
-//  console.log(deleteatfirst(arrsplice))
+// console.log(deleteatlast(arrsplice))
+// console.log(deleteatmiddle(arrsplice))
 //  console.log(deleteatmiddle(arrsplice))
-// console.log(insertelemetatmiddle(arrsplice,6))
 
 function sortstringasc(array) {
   return array.sort((a, b) => a.localeCompare(b));
@@ -210,14 +208,15 @@ function insertelemetatfirst(array, element) {
 }
 function deleteatlast(array, element) {
   debugger
-  let result = array.slice(array.length,0);
+  let result = array.slice(0,array.length-1);
   return result
-// }
+ }
 function deleteatmiddle(array, element) {
   debugger
-
+  console.log(array);
   let middlecount=Math.round(array.length/2);
-  return array.slice(middlecount,0);
+  console.log(middlecount);
+  return array.slice(array.length-1,middlecount);
 }
 function deleteatfirst(array, element) {
   debugger
