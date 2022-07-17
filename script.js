@@ -178,12 +178,12 @@ let arrsplice = ['a', 'b', 'c', 'd', 'e'];
 let result = [];
 console.log(sortstringdesc(arrstringsort));
 console.log(sortstringasc(arrstringsort));
- insertelemetatlast(arrsplice,'j')
- console.log((arrsplice))
- insertelemetatmiddle(arrsplice,'v')
- console.log((arrsplice))
-insertelemetatfirst(arrsplice,'m')
- console.log((arrsplice))
+insertelemetatlast(arrsplice, 'j');
+console.log(arrsplice);
+insertelemetatmiddle(arrsplice, 'v');
+console.log(arrsplice);
+insertelemetatfirst(arrsplice, 'm');
+console.log(arrsplice);
 // console.log(deleteatlast(arrsplice))
 // console.log(deleteatmiddle(arrsplice))
 //  console.log(deleteatmiddle(arrsplice))
@@ -195,32 +195,101 @@ function sortstringdesc(array) {
   return array.sort((a, b) => b.localeCompare(a));
 }
 function insertelemetatlast(array, element) {
-  return array.splice(array.length,0,element);
+  return array.splice(array.length, 0, element);
 }
 function insertelemetatmiddle(array, element) {
-  let middlecount=Math.round(array.length/2);
-  return array.splice(middlecount,0,element);
+  let middlecount = Math.round(array.length / 2);
+  return array.splice(middlecount, 0, element);
 }
 function insertelemetatfirst(array, element) {
-  debugger
+  debugger;
 
-  return array.splice(0,0,element);
+  return array.splice(0, 0, element);
 }
 function deleteatlast(array, element) {
-  debugger
-  let result = array.slice(0,array.length-1);
-  return result
- }
+  debugger;
+  let result = array.slice(0, array.length - 1);
+  return result;
+}
 function deleteatmiddle(array, element) {
-  debugger
+  debugger;
   console.log(array);
-  let middlecount=Math.round(array.length/2);
+  let middlecount = Math.round(array.length / 2);
   console.log(middlecount);
-  return array.slice(array.length-1,middlecount);
+  return array.slice(array.length - 1, middlecount);
 }
 function deleteatfirst(array, element) {
-  debugger
+  debugger;
 
-  return array.slice(0,0);
+  return array.slice(0, 0);
 }
 /*Assignment 13--End */
+/*Assignment 14--Start */
+function calculator(input1, input2) {
+  (this.input1 = input1),
+    (this.input2 = input2),
+    (this.numadd = function () {
+      debugger;
+      if (isNaN(this.input1)) {
+        this.input1 = 0;
+      }
+      if (isNaN(this.input2)) {
+        this.input2 = 0;
+      }
+      let result = this.input1 + this.input2;
+      console.log(result);
+      return result;
+    }),
+    (this.numsubract = function () {
+      if (isNaN(this.input1)) {
+        this.input1 = 0;
+      }
+      if (isNaN(this.input2)) {
+        this.input2 = 0;
+      }
+      let result = this.input1 - this.input2;
+      console.log(result);
+      return result;
+    }),
+    (this.nummultiply = function () {
+      if (isNaN(this.input1)) {
+        this.input1 = 0;
+      }
+      if (isNaN(this.input2)) {
+        this.input2 = 0;
+      }
+      let result = this.input1 * this.input2;
+      console.log(result);
+      return result;
+    }),
+    (this.numDivide = function () {
+      if (isNaN(this.input1)) {
+        this.input1 = 0;
+      }
+      if (isNaN(this.input2)) {
+        this.input2 = 0;
+      }
+      let result = this.input1 / this.input2;
+      console.log(result);
+      return result;
+    }),
+    (this.numPow = function () {
+      if (isNaN(this.input1)) {
+        this.input1 = 0;
+      }
+      if (isNaN(this.input2)) {
+        this.input2 = 0;
+      }
+      let result = Math.pow(this.input1, this.input2);
+      console.log(result);
+      return result;
+    });
+}
+
+let calc = new calculator(1, 1);
+calc.numadd();
+calc.numsubract();
+calc.nummultiply();
+calc.numDivide();
+calc.numPow();
+/*Assignment 14--Start */
