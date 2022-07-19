@@ -195,16 +195,19 @@ function sortstringdesc(array) {
   return array.sort((a, b) => b.localeCompare(a));
 }
 function insertelemetatlast(array, element) {
-  return array.splice(array.length, 0, element);
+   array.splice(array.length, 0, element);
+   return array
 }
 function insertelemetatmiddle(array, element) {
   let middlecount = Math.round(array.length / 2);
-  return array.splice(middlecount, 0, element);
+  array.splice(middlecount, 0, element);
+  return array
 }
 function insertelemetatfirst(array, element) {
   debugger;
 
-  return array.splice(0, 0, element);
+  array.splice(0, 0, element);
+  return array
 }
 function deleteatlast(array, element) {
   debugger;
@@ -216,12 +219,13 @@ function deleteatmiddle(array, element) {
   console.log(array);
   let middlecount = Math.round(array.length / 2);
   console.log(middlecount);
-  return array.slice(array.length - 1, middlecount);
+  array.slice(array.length - 1, middlecount);
+  return  array
 }
 function deleteatfirst(array, element) {
   debugger;
-
-  return array.slice(0, 0);
+  array.slice(0, 0);
+  return array
 }
 /*Assignment 13--End */
 /*Assignment 14--Start */
