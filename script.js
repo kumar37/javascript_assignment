@@ -195,19 +195,19 @@ function sortstringdesc(array) {
   return array.sort((a, b) => b.localeCompare(a));
 }
 function insertelemetatlast(array, element) {
-   array.splice(array.length, 0, element);
-   return array
+  array.splice(array.length, 0, element);
+  return array;
 }
 function insertelemetatmiddle(array, element) {
   let middlecount = Math.round(array.length / 2);
   array.splice(middlecount, 0, element);
-  return array
+  return array;
 }
 function insertelemetatfirst(array, element) {
   debugger;
 
   array.splice(0, 0, element);
-  return array
+  return array;
 }
 function deleteatlast(array, element) {
   debugger;
@@ -220,80 +220,81 @@ function deleteatmiddle(array, element) {
   let middlecount = Math.round(array.length / 2);
   console.log(middlecount);
   array.slice(array.length - 1, middlecount);
-  return  array
+  return array;
 }
 function deleteatfirst(array, element) {
   debugger;
   array.slice(0, 0);
-  return array
+  return array;
 }
 /*Assignment 13--End */
 /*Assignment 14--Start */
-function calculator(input1, input2) {
-  (this.input1 = input1),
-    (this.input2 = input2),
-    (this.numadd = function () {
-      debugger;
-      if (isNaN(this.input1)) {
-        this.input1 = 0;
-      }
-      if (isNaN(this.input2)) {
-        this.input2 = 0;
-      }
-      let result = this.input1 + this.input2;
-      console.log(result);
-      return result;
-    }),
-    (this.numsubract = function () {
-      if (isNaN(this.input1)) {
-        this.input1 = 0;
-      }
-      if (isNaN(this.input2)) {
-        this.input2 = 0;
-      }
-      let result = this.input1 - this.input2;
-      console.log(result);
-      return result;
-    }),
-    (this.nummultiply = function () {
-      if (isNaN(this.input1)) {
-        this.input1 = 0;
-      }
-      if (isNaN(this.input2)) {
-        this.input2 = 0;
-      }
-      let result = this.input1 * this.input2;
-      console.log(result);
-      return result;
-    }),
-    (this.numDivide = function () {
-      if (isNaN(this.input1)) {
-        this.input1 = 0;
-      }
-      if (isNaN(this.input2)) {
-        this.input2 = 0;
-      }
-      let result = this.input1 / this.input2;
-      console.log(result);
-      return result;
-    }),
-    (this.numPow = function () {
-      if (isNaN(this.input1)) {
-        this.input1 = 0;
-      }
-      if (isNaN(this.input2)) {
-        this.input2 = 0;
-      }
-      let result = Math.pow(this.input1, this.input2);
-      console.log(result);
-      return result;
-    });
-}
+let obj = new Object({
+  numadd(input1, input2) {
+    debugger;
+    if (isNaN(input1)) {
+      this.input1 = 0;
+    }
+    if (isNaN(input2)) {
+      this.input2 = 0;
+    }
+    let result = input1 + input2;
+    console.log(result);
+    return result;
+  },
+  numsubract(input1, input2) {
+    debugger;
+    if (isNaN(input1)) {
+      input1 = 0;
+    }
+    if (isNaN(input2)) {
+      input2 = 0;
+    }
+    let result = input1 - input2;
+    console.log(result);
+    return result;
+  },
+  nummultiply(input1, input2) {
+    debugger;
+    if (isNaN(input1)) {
+      input1 = 0;
+    }
+    if (isNaN(input2)) {
+      input2 = 0;
+    }
+    let result = input1 * input2;
+    console.log(result);
+    return result;
+  },
+  numDivide(input1, input2) {
+    debugger;
+    if (isNaN(input1)) {
+      input1 = 0;
+    }
+    if (isNaN(input2)) {
+      input2 = 0;
+    }
+    let result = input1 / input2;
+    console.log(result);
+    return result;
+  },
+  numPow(input1, input2) {
+    debugger;
+    if (isNaN(input1)) {
+      input1 = 0;
+    }
+    if (isNaN(input2)) {
+      input2 = 0;
+    }
+    let result = Math.pow(input1, input2);
+    console.log(result);
+    return result;
+  },
+});
 
-let calc = new calculator(1, 1);
-calc.numadd();
-calc.numsubract();
-calc.nummultiply();
-calc.numDivide();
-calc.numPow();
+obj.numadd(1, 1);
+obj.numsubract(2, 1);
+obj.nummultiply(5, 9);
+obj.numDivide('tete', 1);
+obj.numPow(2, 3);
 /*Assignment 14--Start */
